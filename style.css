@@ -1,0 +1,143 @@
+
+*
+{
+    margin:0;
+    padding:0;
+    font-family:consolas;
+}
+body {
+    background:linear-gradient(black ,white) center no-repeat;
+    background-size:cover;
+}
+
+h2
+{
+    position: relative;
+    left:37%;
+    top:100px;
+    color:white;
+    letter-spacing:2px;
+
+}
+
+.container
+{
+    width:100%;
+    height:100vh;
+  
+    display: flex;
+
+    background-blend-mode: color-burn;
+}
+.card
+{
+    position: relative;
+    width:250px;
+    height: 400px;
+    top:150px;
+    left:50px;
+    margin:20px;
+    perspective: 1000px;
+
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left:0;
+    background:linear-gradient(rgba(0 , 0 , 0,0.5),rgba(0 , 0 , 0,0.7)) , url(./card-bg.jpg)  no-repeat; 
+    background-size:cover;
+    background-position-x: 0;
+    width:50%;
+    height:100%; 
+    transform:rotateY(0deg);
+    transform-origin: left;
+    transition: transform 1s ease-in-out;
+
+}
+.right {
+    position: absolute;
+    top: 0;
+    right:0;
+    background:linear-gradient(rgba(0 , 0 , 0,0.5),rgba(0 , 0 , 0,0.7)) , url(./card-bg.jpg)  no-repeat; 
+    background-size:cover;
+    background-position-x: -125px;
+    width:50%;
+    height:100%; 
+    transform:rotateY(0deg);
+    transform-origin: right;
+    transition: transform 1s ease-in-out;
+
+}
+.back
+{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    transform:translateZ(-300px);
+    transition: z-index 0.4s step-end, transform 1s;
+
+}
+.back.back1
+{
+    background:linear-gradient(rgba(0 , 0 , 0,0.5),rgba(0 , 0 , 0,0.7)) ,url(./WhatsApp\ Image\ 2021-07-20\ at\ 18.15.28.jpeg)   no-repeat; 
+    background-size:cover;
+}
+.back.back2
+{
+    background:linear-gradient(rgba(0 , 0 , 0,0.5),rgba(0 , 0 , 0,0.7)) ,url(./WhatsApp\ Image\ 2021-07-20\ at\ 18.15.36.jpeg)   no-repeat; 
+    background-size:cover;
+}
+.back.back3
+{
+    background:linear-gradient(rgba(0 , 0 , 0,0.5),rgba(0 , 0 , 0,0.7)) ,url(./WhatsApp\ Image\ 2021-07-20\ at\ 18.23.17.jpeg)   no-repeat; 
+    background-size:cover;
+}
+.back.back4
+{
+    background:linear-gradient(rgba(0 , 0 , 0,0.5),rgba(0 , 0 , 0,0.7)) ,url(./WhatsApp\ Image\ 2021-07-20\ at\ 18.15.46.jpeg)   no-repeat; 
+    background-size:cover;
+}
+
+.card:hover .left{
+    transform:rotateY(-360deg);
+}
+.card:hover .right{
+    transform:rotateY(360deg);
+}
+.card:hover .back{
+    transform: translateZ(0);
+    z-index: 1;
+}
+
+@media only screen and (max-width:800px) {
+
+    body {
+        background:linear-gradient(black ,white) center no-repeat;
+        background-size:cover;
+    }
+    .container
+    {
+        display: inline;
+      
+
+    }
+    
+h2
+{
+  position: relative;
+  left: 90px;
+
+}
+    .card
+    {
+        
+        align-items: center;
+        align-content: center;
+        margin-left: 70px;
+        margin-bottom: 80px;
+    }
+}

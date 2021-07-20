@@ -5,10 +5,7 @@
     padding:0;
     font-family:consolas;
 }
-body {
-    background:linear-gradient(black ,white) center no-repeat;
-    background-size:cover;
-}
+
 
 h2
 {
@@ -22,10 +19,12 @@ h2
 
 .container
 {
-    width:100%;
+
+    width:100rem;
     height:100vh;
-  
     display: flex;
+    background:url(./WhatsApp\ Image\ 2021-07-20\ at\ 21.44.48.jpeg) ;
+    background-size:cover;
 
     background-blend-mode: color-burn;
 }
@@ -116,14 +115,12 @@ h2
 @media only screen and (max-width:800px) {
 
     body {
-        background:linear-gradient(black ,white) center no-repeat;
-        background-size:cover;
+        background:url(./WhatsApp\ Image\ 2021-07-20\ at\ 21.44.48.jpeg);
     }
     .container
     {
+       
         display: inline;
-      
-
     }
     
 h2
@@ -132,7 +129,8 @@ h2
   left: 90px;
 
 }
-    .card
+
+.card
     {
         
         align-items: center;
